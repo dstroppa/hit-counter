@@ -1,7 +1,7 @@
 # A simple Python Web Service configuration
 web:
   build: .
-  command: python app.py
+  command: gunicorn app:app -b 0.0.0.0:5000
   ports:
    - "5000:5000"
   links:
